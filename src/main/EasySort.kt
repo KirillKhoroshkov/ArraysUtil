@@ -5,16 +5,16 @@ class EasySort {
 
         @JvmStatic fun <T: Comparable<T>>bubbleSort(array: Array<T>) {//Пузырек с флагом
             var flag: Boolean
-            var box: T
+            var temporary: T
             var lastIndex = array.size - 2
             do {
                 flag = false
                 for (j in 0..lastIndex) {
                     if (array[j] > array[j + 1]) {
                         flag = true
-                        box = array[j]
+                        temporary = array[j]
                         array[j] = array[j + 1]
-                        array[j + 1] = box
+                        array[j + 1] = temporary
                     }
                 }
                 lastIndex--
@@ -22,15 +22,15 @@ class EasySort {
         }
 
         @JvmStatic fun <T: Comparable<T>> insertionSort(array: Array<T>) {//Вставками
-            var box: T
+            var temporary: T
             for (sortedIndex in 1..array.lastIndex) {
-                box = array[sortedIndex]
+                temporary = array[sortedIndex]
                 var index = sortedIndex
-                while (index != 0 && box < array[index - 1]) {
+                while (index != 0 && temporary < array[index - 1]) {
                     array[index] = array[index - 1]
                     index--
                 }
-                array[index] = box
+                array[index] = temporary
             }
         }
 

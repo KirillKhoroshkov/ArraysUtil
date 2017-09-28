@@ -27,7 +27,5 @@ class MaxSubArray {
             }
             return array.copyOfRange(leftIndex, rightIndex + 1)
         }
-
-        
     }
 }
