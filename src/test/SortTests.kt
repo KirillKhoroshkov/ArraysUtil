@@ -36,4 +36,14 @@ class SortTests {
         println("heapSort")
         runTests({ array: Array<Int> -> run { HardSort.heapSort(array) }})
     }
+
+    @Test fun quickSortTest(){
+        println("quickSort")
+        runTests({ array: Array<Int> -> run { HardSort.quickSort(array) }})
+    }
+
+    @Test fun mergeSortTest(){
+        println("mergeSort")
+        runTests({ array: Array<Int> -> run { HardSort.mergeSort(array) }})
+    }
 }
