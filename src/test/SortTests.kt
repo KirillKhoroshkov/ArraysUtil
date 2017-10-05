@@ -9,8 +9,8 @@ import org.testng.annotations.Test
 class SortTests {
 
     private fun runTests(sort: (Array<Int>) -> Unit){
-        val testArray = arrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-        val array = arrayOf(9, 3, 6, 1, 4, 5, 2, 7, 8, 0)
+        val testArray = arrayOf(-10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+        val array = arrayOf(-10, 9, 3, 6, 1, 4, 5, 2, 7, 8, 0)
         println(Util.toString(array))
         sort(array)
         println(Util.toString(array))
